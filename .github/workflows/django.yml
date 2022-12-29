@@ -35,7 +35,5 @@ jobs:
     - name: Setup .env
       run: 
         cp .env.example .env
-    - name: running tests
-      run: 
-        python manage.py test
+    
 
