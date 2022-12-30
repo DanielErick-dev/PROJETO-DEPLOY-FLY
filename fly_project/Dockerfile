@@ -19,7 +19,7 @@ RUN set -ex && \
 COPY . /code/
 
 
-RUN cd fly_project python manage.py collectstatic --noinput
+RUN python manage.py collectstatic --noinput
 
 EXPOSE 8000
 

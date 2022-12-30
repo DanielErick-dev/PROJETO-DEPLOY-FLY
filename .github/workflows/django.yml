@@ -28,6 +28,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install Dependencies
       run: |
+        cd fly_project
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Setup .env
@@ -42,7 +43,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flyctl deploy --remote-only
+      - run: cd fly_project flyctl deploy --remote-only
 
 
     
