@@ -46,6 +46,7 @@ jobs:
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: 
           cd fly_project
+      - run:
           flyctl deploy --remote-only
 
     
