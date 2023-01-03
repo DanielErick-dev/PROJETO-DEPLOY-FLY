@@ -19,9 +19,9 @@ RUN set -ex && \
 COPY . /code/
 
 
-RUN python manage.py collectstatic --noinput
+RUN fly_project\manage.py collectstatic --noinput
 
 EXPOSE 8000
 
 # replace demo.wsgi with <project_name>.wsgi
-CMD ["gunicorn", "--bind", ":8000", "--workers", "2", "wsgi"]
+CMD ["gunicorn", "--bind", ":8000", "--workers", "2", "fly_project.wsgi"]
