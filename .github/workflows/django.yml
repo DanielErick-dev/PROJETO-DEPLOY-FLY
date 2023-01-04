@@ -34,6 +34,10 @@ jobs:
     - name: Setup .env
       run: 
         cp .env.example .env
+    - name: Running Tests
+      run: |
+        cd fly_project
+        pytest
   deploy:
     name: Deploy app
     runs-on: ubuntu-latest
