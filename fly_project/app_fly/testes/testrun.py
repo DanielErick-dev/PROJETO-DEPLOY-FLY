@@ -1,5 +1,6 @@
-from django.test import TestCase
-
+#from django.test import TestCase
+def test():
+  assert 1 + 1 == 2
 
 # class TestHome(TestCase):
 #     def test_home(self):
