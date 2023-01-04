@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-from decouple import config, Csv
+from decouple import config
 from pathlib import Path
 from dj_database_url import parse as db_url
 
@@ -27,12 +27,13 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool, default=False)
 
 # lista de hosts acessiveis
-ALLOWED_HOSTS = ['locahost', '127.0.0.1']
+ALLOWED_HOSTS = ['app-fly-daniel.fly.dev', 'locahost', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'app_fly.apps.AppFlyConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
