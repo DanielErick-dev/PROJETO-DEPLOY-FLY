@@ -28,7 +28,7 @@ DEBUG = config('DEBUG', cast=bool, default=False)
 
 # lista de hosts acessiveis
 ALLOWED_HOSTS = ['app-fly-daniel.fly.dev', 'locahost', '127.0.0.1']
-
+#
 
 # Application definition
 
